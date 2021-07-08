@@ -1,0 +1,16 @@
+Source: tzsp2pcap
+Build-Depends: debhelper (>= 9), make, dpkg-dev (>= 1.15.7), libpcap-dev
+Section: utils
+Priority: optional
+Maintainer: Andrii Miroshnychenko <zentavr@trafford.com.ua>
+Standards-Version: 3.9.5
+Homepage: https://github.com/thefloweringash/tzsp2pcap
+
+Package: tzsp2pcap
+Priority: optional
+Architecture: any
+Depends: ${shlibs:Depends}, ${perl:Depends}, ${misc:Depends}
+Description: TaZmen Sniffer Protocol to PCAP converter
+ This is a simple utility to listen for TaZmen Sniffer Protocol (TZSP) packets and output the contents on stdout in
+ pcap format. It has only been lightly tested with Mikrotik RouterOS products, and may need alterations to work with
+ other devices.
