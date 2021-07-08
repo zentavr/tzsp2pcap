@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+DH_VERBOSE = 1
+DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	install -s -m 755 tzsp2pcap -D debian/tzsp2pcap/usr/bin/tzsp2pcap
